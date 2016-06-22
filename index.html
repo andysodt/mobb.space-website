@@ -42,11 +42,10 @@
         }).addTo(map);
 
         function onLocationFound(e) {
-            L.marker(e.latlng).addTo(map)
-                .bindPopup("this is you").openPopup();
+	   // Here we can send new location to server.
         }
 
-//        map.on('locationfound', onLocationFound);
+        map.on('locationfound', onLocationFound);
 
         function onLocationError(e) {
             alert(e.message);
